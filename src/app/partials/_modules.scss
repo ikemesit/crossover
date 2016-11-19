@@ -1,0 +1,86 @@
+.dashboard{
+    & .dashboard-nav, .dashboard-item-head{
+        display: flex;
+        flex-flow: nowrap row;
+        justify-content: space-around;
+        & .dashboard-nav-item, .dashboard-label{
+            flex: 1 1 auto;
+            width: 12.5%;
+            text-align: center;
+            /*vertical-align: middle;*/
+        }
+    }
+
+    & .dashboard-item{
+        padding: 10px 0;
+        border: thin solid lighten($black, 80%);
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+    & .dashboard-item-head{
+        font-size: 14px;
+        & i{
+            margin-right: 20px;
+        }
+        & h4{
+            font-size: 14px;
+        }
+        & .box-container{
+            padding: 5px;
+        }
+        & .box{
+            border: 2px solid lighten($black, 60%);
+            width: 40px;
+            height: 20px;
+            display: block;
+            margin: auto;
+            & .progress-indicator{
+                width: 20%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                display: block;
+                background-color: $black;
+            }
+        }
+    }
+    & .dashboard-item-body{
+        padding: 10px;
+        display: flex;
+        flex-flow: nowrap row;
+        justify-content: space-around;
+        & .panel{
+            width: 20%;
+            height: 200px;
+            display: block;
+            /*border: thin solid lighten($black, 60%);*/
+            box-shadow: 0px 0px 4px lighten($black, 60%);
+            margin: 10px;
+            border-radius: 0px;
+            & .panel-head{
+                display: block;
+                margin: 0;
+                padding: 5px;
+
+                & h4{
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+        & .panel.no-border{
+            border: none;
+            box-shadow: none;
+            & .panel-head{
+                display: block;
+                margin: 0;
+                padding: 5px;
+                & h4{
+                    margin: 0;
+                    padding: 0;
+                    text-align: center
+                }
+            }
+        }
+    }
+}

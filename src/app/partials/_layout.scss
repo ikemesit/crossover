@@ -1,0 +1,18 @@
+header[role="top-nav"]{
+    width: 100vw;
+    padding: 20px;
+    background: $black;
+    & nav{
+        & a{
+            display: inline-block;
+            margin-right: 20px;
+            color: $white;
+        }
+    }
+}
+
+.dashboard{
+    margin-top: 20px;
+    width: 100%;
+}
+
