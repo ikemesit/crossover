@@ -70,17 +70,25 @@
             margin: 10px;
             border-radius: 0px;
             & .panel-heading{
+                height: 20%;
                 & h4{
                     margin: 0;
                     padding: 0;
                     font-family: $sourcesans-bold;
                 }
             }
+            & .panel-body{
+                height: 40%;
+            }
+            & .panel-footer{
+                height: 40%;
+            }
         }
         & .panel.no-border{
             border: none;
             box-shadow: none;
             & .panel-heading{
+
                 & h4{
                     margin: 0;
                     padding: 0;
