@@ -13,7 +13,7 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
 // endbower
 $fa-font-path: "../../bower_components/font-awesome/fonts";
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
-
+@import "partials/fonts";
 @import "partials/variables";
 @import "partials/layout";
 @import "partials/modules";
@@ -34,18 +34,8 @@ $fa-font-path: "../../bower_components/font-awesome/fonts";
   }
 }
 
-.collapse.am-collapse {
-  animation-duration: .6s;
-  animation-timing-function: ease;
-  animation-fill-mode: backwards;
-  overflow: hidden;
-  &.in-remove {
-    animation-name: collapse;
-    display: block;
-  }
-  &.in-add {
-    animation-name: expand;
-  }
+body{
+  font-family: $sourcesans sans-serif;
 }
 
 /**

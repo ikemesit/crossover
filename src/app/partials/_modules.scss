@@ -1,4 +1,14 @@
 .dashboard{
+    & .dashboard-nav{
+        background-color: $blue;
+        color: $white;
+        border: thin solid $blue;
+        & h3{
+            color: $white;
+            font-family: $sourcesans-bold;
+            // font-size: 16px;
+        }
+    }
     & .dashboard-nav, .dashboard-item-head{
         display: flex;
         flex-flow: nowrap row;
@@ -16,14 +26,16 @@
         border: thin solid lighten($black, 80%);
         border-radius: 4px;
         margin-top: 10px;
+        background: linear-gradient(to bottom, $green, $white);
     }
     & .dashboard-item-head{
-        font-size: 14px;
+        font-size: 16px;
         & i{
             margin-right: 20px;
         }
         & h4{
-            font-size: 14px;
+            font-size: 16px;
+            font-family: $sourcesans;
         }
         & .box-container{
             padding: 5px;
@@ -53,28 +65,22 @@
             width: 20%;
             height: 200px;
             display: block;
-            /*border: thin solid lighten($black, 60%);*/
+            overflow: hidden;
             box-shadow: 0px 0px 4px lighten($black, 60%);
             margin: 10px;
             border-radius: 0px;
-            & .panel-head{
-                display: block;
-                margin: 0;
-                padding: 5px;
-
+            & .panel-heading{
                 & h4{
                     margin: 0;
                     padding: 0;
+                    font-family: $sourcesans-bold;
                 }
             }
         }
         & .panel.no-border{
             border: none;
             box-shadow: none;
-            & .panel-head{
-                display: block;
-                margin: 0;
-                padding: 5px;
+            & .panel-heading{
                 & h4{
                     margin: 0;
                     padding: 0;
