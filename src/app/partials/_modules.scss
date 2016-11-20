@@ -26,7 +26,14 @@
         border: thin solid lighten($black, 80%);
         border-radius: 4px;
         margin-top: 10px;
-        // background: linear-gradient(to bottom, $green, $white);
+        // Experimental
+        height: 60px;
+        overflow: hidden;
+        transition: height 0.2s ease;
+        &:hover{
+            height: 300px;
+        }
+        //
     }
     & .dashboard-item-head{
         font-size: 16px;
@@ -82,6 +89,12 @@
             }
             & .panel-footer{
                 height: 40%;
+                display: flex;
+                flex-flow: nowrap row;
+                & span{
+                    border: thin solid $black;
+                    flex: 1 1 0;
+                }
             }
         }
         & .panel.no-border{
