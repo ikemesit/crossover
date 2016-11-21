@@ -7,7 +7,7 @@
 
   /** @ngInject */
   function dataService($log, $http) {
-    var apiHost = 'https://api.github.com/repos/Swiip/generator-gulp-angular';
+    var apiHost = 'app/components/mockData/data.json';
 
     var service = {
       apiHost: apiHost,
@@ -16,12 +16,9 @@
 
     return service;
 
-    function getData(limit) {
-      if (!limit) {
-        limit = 30;
-      }
-
-      return $http.get(apiHost + '/contributors?per_page=' + limit)
+    function getData() {
+      
+      return $http.get(apiHost)
         .then(getDataComplete)
         .catch(getDataFailed);
 

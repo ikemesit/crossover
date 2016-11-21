@@ -1,0 +1,56 @@
+.metrics-panel{
+    & .panel-heading{
+        height: 10%;
+        background-color: $green;
+    }
+    & .panel-body{
+        height: 45%;
+        background-color: $green;
+    }
+    & .panel-footer{
+        height: 45%;
+    }
+}
+
+
+// State Changes
+.metrics-panel.running{
+    & .panel-heading, .panel-body{
+        background-color: $blue;
+    }
+    & .panel-footer-inner{
+        & i, p{
+            color: $blue;
+        }
+    }    
+}
+& .metrics-panel.complete, .metrics-panel.accepted{
+    & .panel-heading, .panel-body{
+        background-color: $green;
+    }
+    & .panel-footer-inner{
+        & i, p{
+            color: $green;
+        }
+    }
+}
+& .metrics-panel.pending{
+    & .panel-heading, .panel-body{
+        background-color: $grey;
+    }
+    & .panel-footer-inner{
+        & i, p{
+            color: $grey;
+        }
+    } 
+}
+& .metrics-panel.rejected{
+    & .panel-heading, .panel-body{
+        background-color: $red;
+    }
+    & .panel-footer-inner{
+        & i, p{
+            color: $red;
+        }
+    }
+}

@@ -16,6 +16,6 @@
       <h3 class="panel-title dashboard-nav-item">Functional Test</h3>
     </div>
     <div class="panel-body dashboard-body">
-      <dashboard-item ng-repeat="panels in main.panels"></dashboard-item>
+      <dashboard-item dashboard-item-data="data" ng-repeat="data in main.data track by $index"></dashboard-item>
     </div>
 </div>

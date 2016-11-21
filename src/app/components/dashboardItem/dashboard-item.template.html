@@ -1,89 +1,85 @@
-<div class="dashboard-item">
+<div class="dashboard-item" ng-class="[dbi.data.state, {expanded: dbi.expanded}]" ng-click="dbi.expandItem()" tabindex="-1">
     <div class="dashboard-item-head">
         <div class="panel-title dashboard-label">
-        <h4><i class="fa fa-television fa-lg"></i>432468</h4>
+            <h4>
+                <i class="fa fa-lg" ng-class="dbi.itemicon"></i>
+                {{ ::dbi.data.changelist }}
+            </h4>
         </div>
         <div class="panel-title dashboard-label">
-        <h4>jtuck</h4>
+            <h4>{{ ::dbi.data.owner }}</h4>
         </div>
         <div class="panel-title dashboard-label">
-        <h4>4/18/2014 12:12pm</h4>
+            <h4>{{ ::dbi.data.time_started }}</h4>
         </div>
         <div class="panel-title dashboard-label">
-        <h4>Running</h4>
+            <h4>{{ ::dbi.data.state }}</h4>
         </div>
         <div class="panel-title dashboard-label box-container">
-        <div class="box"></div>
+            <div class="box" ng-class="dbi.data.metrics.state">
+                <span class="progress-indicator" style="width: {{ ::dbi.data.metrics.value }}%" ng-class="dbi.data.metrics.state" ></span>
+            </div>
         </div>
         <div class="panel-title dashboard-label box-container">
-        <div class="box"></div>
+            <div class="box" ng-class="dbi.data.build.state">
+                <span class="progress-indicator" style="width: {{ ::dbi.data.build.value }}%" ng-class="dbi.data.build.state" ></span>
+            </div>
         </div>
         <div class="panel-title dashboard-label box-container">
-        <div class="box">
-            <span class="progress-indicator"></span>
-        </div>
+            <div class="box" ng-class="dbi.data.unit_test.state">
+                <span class="progress-indicator" style="width: {{ ::dbi.data.unit_test.value }}%" ng-class="dbi.data.unit_test.state" ></span>
+            </div>
         </div>
         <div class="panel-title dashboard-label box-container">
-        <div class="box"></div>
+            <div class="box" ng-class="dbi.data.functional_test.state">
+                <span class="progress-indicator" style="width: {{ ::dbi.data.functional_test.value }}%" ng-class="dbi.data.functional_test.state" ></span>
+            </div>
         </div>
     </div>
-    <div class="dashboard-item-body">
-        <div class="panel">
-        <div class="panel-heading">
-            <h4>Metrics</h4>
-        </div>
-        <div class="panel-body">
-            <span>Test</span>
-            <span>Maintainability</span>
-        </div>
-        <div class="panel-footer">
-            <span>Security</span>
-            <span>Workmanship</span>
-        </div>
-        </div>
-        <div class="panel">
-        <div class="panel-heading">
-            <h4>Build</h4>
-        </div>
-        <div class="panel-body">
-            <span>Debug</span>
-            <span>Release</span>
-        </div>
-        <div class="panel-footer">
-            <span>Security</span>
-            <span>Workmanship</span>
-        </div>
-        </div>
-        <div class="panel">
-        <div class="panel-heading">
-            <h4>Unit Test</h4>
-        </div>
-        <div class="panel-body">
-            <span>Test</span>
-            <span>Maintainability</span>
-        </div>
-        <div class="panel-footer">
-            <span>Security</span>
-            <span>Workmanship</span>
-        </div>
-        </div>
-        <div class="panel">
-        <div class="panel-heading">
-            <h4>Functional Test</h4>
-        </div>
-        <div class="panel-body">
-            <span>Test</span>
-            <span>Maintainability</span>
-        </div>
-        <div class="panel-footer">
-            <span>Security</span>
-            <span>Workmanship</span>
-        </div>
-        </div>
+    <div class="dashboard-item-body" ng-if="dbi.expanded">
+        <dashboard-metrics-panel
+            value="dbi.data.metrics.value"
+            state="dbi.data.metrics.state"
+            test="dbi.data.metrics.test"
+            maintainability="dbi.data.metrics.maintainability"
+            security="dbi.data.security"
+            workmanship="dbi.data.workmanship">
+        </dashboard-metrics-panel>
+
+        <dashboard-build-panel
+            value="dbi.data.build.value"
+            state="dbi.data.build.state"
+            time="dbi.data.build.time"
+            date="dbi.data.build.date">
+        </dashboard-build-panel>
+
+        <dashboard-ut-panel
+            value="dbi.data.unit_test.value"
+            state="dbi.data.unit_test.state"
+            passed="dbi.data.unit_test.passed"
+            failed="dbi.data.unit_test.failed"
+            code="dbi.data.unit_test.code"
+            percent="dbi.data.unit_test.percent"
+            chart="dbi.utChartData">
+        </dashboard-ut-panel>
+
+        <dashboard-ft-panel
+            value="dbi.data.functional_test.value"
+            state="dbi.data.functional_test.state"
+            passed="dbi.data.functional_test.passed"
+            failed="dbi.data.functional_test.failed"
+            code="dbi.data.functional_test.code"
+            percent="dbi.data.functional_test.percent"
+            chart="dbi.ftChartData">
+        </dashboard-ft-panel>
+        
+        
+        
         <div class="panel no-border">
-        <div class="panel-heading">
-            <h4>Result</h4>
-        </div>
+            <div class="panel-heading">
+                <p class="title">Result:</p>
+                <h4>Complete</h4>
+            </div>
         </div>
     </div>
 </div>

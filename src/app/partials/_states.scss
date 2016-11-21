@@ -1,0 +1,60 @@
+.dashboard{
+    
+    // Dashboard item
+    & .dashboard-item.running{
+        border: 1px solid rgba($blue, 0.4);
+    }
+
+    & .dashboard-item.complete, .dashboard-item.accepted{
+        border: 1px solid rgba($green, 0.4);
+    }
+    & .dashboard-item.pending{
+        border: 1px solid rgba($grey, 0.4);
+    }
+    & .dashboard-item.rejected{
+        border: 1px solid rgba($red, 0.4);
+    }
+    & .dashboard-item.expanded{
+        @keyframes expand{
+            from{ height: 60px;}
+            to{ height: 300px;}
+        }
+        animation: expand;
+        animation-duration: 0.4s;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+
+
+    // Progress Indicators
+    & .progress-indicator.running{
+        background-color: $blue;
+    }
+    & .progress-indicator.complete, .progress-indicator.accepted{
+        background-color: $green;
+    }
+    & .progress-indicator.pending{
+        background-color: $grey;
+    }
+    & .progress-indicator.rejected{
+        background: $red;
+    }
+
+    // Dashboard item box
+    & .box.running{
+        border-color: $blue;
+    }
+    & .box.complete, .box.accepted{
+        border-color: $green;
+    }
+    & .box.pending{
+        border-color: $grey;
+    }
+    & .box.rejected{
+        border-color: $red;
+    }
+
+    
+
+    
+}

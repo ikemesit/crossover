@@ -1,0 +1,21 @@
+<div class="panel unit-test-panel">
+    <div class="panel-heading">
+        <h4>Unit Test</h4>
+    </div>
+    <div class="panel-body">
+        <div class="panel-body-inner">
+            <donut ng-model="dbup.chart" colours = "dbup.colors" width="100" height="100"></donut>
+        </div>
+        <div class="panel-body-inner">
+            <h2>{{ ::dbup.percent }}%</h2>
+            <small>tests passed</small>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="footer-progress">
+            <p class="pull-left">{{ ::dbup.value }}%</p>
+            <small class="pull-left">Code Covered</small>
+            <span class="progress-indicator" style="width: {{ ::dbup.value }}%" ng-class="dbup.state" ></span>
+        </div>
+    </div>
+</div>
