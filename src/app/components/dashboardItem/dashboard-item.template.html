@@ -15,7 +15,7 @@
         <div class="panel-title dashboard-label">
             <h4>{{ ::dbi.data.state }}</h4>
         </div>
-        <div class="panel-title dashboard-label box-container">
+        <div class="panel-title dashboard-label box-container" >
             <div class="box" ng-class="dbi.data.metrics.state">
                 <span class="progress-indicator" style="width: {{ ::dbi.data.metrics.value }}%" ng-class="dbi.data.metrics.state" ></span>
             </div>
@@ -78,7 +78,7 @@
         <div class="panel no-border">
             <div class="panel-heading">
                 <p class="title">Result:</p>
-                <h4>Complete</h4>
+                <h4>{{ ::dbi.data.state }}</h4>
             </div>
         </div>
     </div>

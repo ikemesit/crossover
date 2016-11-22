@@ -6,7 +6,7 @@
     .directive('dashboardUtPanel', dashboardUtPanel);
 
   /** @ngInject */
-  function dashboardUtPanel($log) {
+  function dashboardUtPanel() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/dashboardUtPanel/dashboard-ut-panel.template.html',
@@ -27,7 +27,7 @@
 
     return directive;
 
-    function dbupLinkFunc(scope, element){
+    function dbupLinkFunc(){
       
     }
 

@@ -6,7 +6,7 @@
     .directive('dashboardFtPanel', dashboardFtPanel);
 
   /** @ngInject */
-  function dashboardFtPanel($log) {
+  function dashboardFtPanel() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/dashboardFtPanel/dashboard-ft-panel.template.html',
@@ -27,7 +27,7 @@
 
     return directive;
 
-    function dbfpLinkFunc(scope, element){
+    function dbfpLinkFunc(){
       
     }
 

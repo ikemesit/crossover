@@ -6,7 +6,7 @@
     .directive('dashboardItem', dashboardItem);
 
   /** @ngInject */
-  function dashboardItem($log) {
+  function dashboardItem() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/dashboardItem/dashboard-item.template.html',
@@ -77,8 +77,6 @@
         }
         return ftData;
       }
-
-
 
     }
   }

@@ -6,7 +6,7 @@
     .directive('dashboardMetricsPanel', dashboardMetricsPanel);
 
   /** @ngInject */
-  function dashboardMetricsPanel($log) {
+  function dashboardMetricsPanel() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/dashboardMetricsPanel/dashboard-metrics-panel.template.html',
@@ -16,7 +16,7 @@
         test                : "<",
         maintainability     : "<",
         security            : "<",
-        workmanship         : "<",
+        workmanship         : "<"
       },
       controller: DashboardMetricsPanelController,
       controllerAs: 'dbmp',
@@ -26,13 +26,13 @@
 
     return directive;
 
-    function dbmpLinkFunc(scope, element){
+    function dbmpLinkFunc(){
       
     }
 
     /** @ngInject */
     function DashboardMetricsPanelController() {
-      var vm = this;
+      
 
     }
   }

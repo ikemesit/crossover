@@ -6,7 +6,7 @@
     .directive('dashboardBuildPanel', dashboardBuildPanel);
 
   /** @ngInject */
-  function dashboardBuildPanel($log) {
+  function dashboardBuildPanel() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/dashboardBuildPanel/dashboard-build-panel.template.html',
@@ -24,14 +24,13 @@
 
     return directive;
 
-    function dbbpLinkFunc(scope, element){
+    function dbbpLinkFunc(){
       
     }
 
     /** @ngInject */
     function DashboardBuildPanelController() {
-      var vm = this;
-
+  
     }
   }
 })();
